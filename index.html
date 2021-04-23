@@ -3,36 +3,31 @@
  
   
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Győr SZC Pattantyús Ábrahám Géza Technikum | Főoldal</title>
-  <link rel="stylesheet" href="index.css">
-  <link rel="shortcut icon" href="pagisz.jpg" type="image/x-icon">
+  <title>Győr SZC Pattantyús-Ábrahám Géza Technikum | Főoldal</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="shortcut icon" href="images/pagisz.jpg" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="css/responsive.css">
   
-
+  <!--scripts-->
+  
+  <script defer src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+   <script defer src="js/cookie.js"></script>
+    <script defer src="js/index.js"></script> 
   
   
-  
+    
    
 </head>
 <body>
-   
-  
-  
- 
-  
-
- 
-
-
  
   <!-- <navigation bar at top> -->
-  
  
   <div class="wrapper" id="head">
     <nav >
@@ -40,12 +35,13 @@
       <input type="checkbox" id="show-menu">
       <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
       <div class="content">
-      <div class="logo"><a href="#"><img src="pagisz.jpg" alt="" width="50" height="50"></a></div>
+      <span class="logo">
+          <a href="#"><img src="./images/pagiszWhite.svg" alt="Logo"></a>
+      </span>
         <ul class="links" >
-          <li >
-            <a  href="#" class="desktop-link"> &#8681;Címlap  </a>
+          <li data-title="Címlap">
+            <a  href="#" class="desktop-link" ><i class="fas fa-bookmark"></i></a>
             <input type="checkbox" id="show-features">
-            <label for="show-features"> &#8681;Címlap</label>
             <ul>
               <li ><a href="#">Iskolánk története</a></li>
               <li ><a href="#">Névaadónk</a></li>
@@ -54,10 +50,9 @@
               
             </ul>
           </li>
-          <li>
-            <a  href="#" class="desktop-link">  &#8681;Beiskolázás  </a>
+          <li data-title="Beiskolázás">
+            <a  href="#" class="desktop-link" ><i class="fas fa-graduation-cap"></i></a>
             <input type="checkbox" id="show-features2">
-            <label for="show-features2"> &#8681; Beiskolázás</label>
             <ul>
               <li><a href="#">Bemutatkozás</a></li>
               <li><a href="#">Felvétali eljárás</a></li>
@@ -66,17 +61,16 @@
             </ul>
           </li>
           <li   >
-            <a  href="#" class="desktop-link"> Iskola>>Págisz</a>
+            <a  href="#" class="desktop-link" data-title="Iskola>>Págisz"> <i class="fas fa-school"></i></a>
             <input type="checkbox" id="show-services">
-            <label for="show-services"> &#8681; Iskola>>Págisz</label>
             <ul class="mega-menu" >
-              <li><a href="#">Dokumentumok</a></li>
+              <li><a href="#"><i class="fas fa-file-alt"></i> Dokumentumok</a></li>
               <li><a href="#">Pattantyús Nap</a></li>
               <li><a href="#">Határtalanul</a></li>
               <li>
-                <a  href="#" class="desktop-link"> &#8681;Dicsőségfal</a>
+                <a  href="#" class="desktop-link">Dicsőségfal</a>
                 <input type="checkbox" id="show-items">
-                <label for="show-items"> &#8681;Dicsőségfal</label>
+                <label for="show-items">Dicsőségfal</label>
                 <ul class="mega-menu2" >
                   <li><a href="#">Verseny eredmények</a></li>
                   <li><a href="#">Akikre büszkék vagyunk</a></li>
@@ -87,9 +81,9 @@
                 </ul>
               </li>
               <li>
-                <a  href="#" class="desktop-link"> &#8681;Korábbi események</a>
+                <a  href="#" class="desktop-link">Korábbi események</a>
                 <input type="checkbox" id="show-items2">
-                <label for="show-items2"> &#8681;Korábbi események</label>
+                <label for="show-items2">Korábbi események</label>
                 <ul class="mega-menu3" >
                   <li><a href="#">Sítáborban voltunk</a></li>
                   <li><a href="#">Érsekújváron voltunk...</a></li>
@@ -105,8 +99,8 @@
               <li><a href="#">Étkezéssel kapcsolatban</a></li>
             </ul>
           </li>
-          <li>
-            <a href="#" class="desktop-link">  &#8681;Págisz  </a>
+          <li data-title="PÁGISZ">
+            <a href="#" class="desktop-link" ><img src="./images/pagiszMenu.svg" alt=""></a>
             <input type="checkbox" id="show-features3">
             <label for="show-features3"> &#8681; Págisz</label>
             <ul>
@@ -116,19 +110,17 @@
               <li><a href="#">Tovább a munka világába...</a></li>
             </ul>
           </li>
-          <li>
-            <a href="#" class="desktop-link"> &#8681;Faliújság  </a>
+          <li data-title="Faliújság" style="font-size: 1.8vw;">
+            <a href="#" class="desktop-link" ><i class="fas fa-newspaper"></i></a>
             <input type="checkbox" id="show-features4">
-            <label for="show-features4"> &#8681; Faliújság</label>
             <ul>
               <li><a href="#">Nyitott oldal mindenkinek</a></li>
               
             </ul>
           </li>
-          <li>
-            <a href="#" class="desktop-link">  &#8681;DÖK  </a>
+          <li data-title="Diák Önkormányzat">
+            <a href="#" class="desktop-link" ><i class="fas fa-gavel"></i></a>
             <input type="checkbox" id="show-features5">
-            <label for="show-features5"> &#8681;DÖK</label>
             <ul>
               <li><a href="#">Bakonyi túranap</a></li>
               <li><a href="#">Dök gyűlés</a></li>
@@ -138,11 +130,13 @@
               <li><a href="#">Osztályok közötti verseny</a></li>
             </ul>
           </li>
-          <li><a href="#">Partnereink</a></li>
-          <li>
-            <a href="#" class="desktop-link">  &#8681;Rovatok  </a>
+          <li data-title="Partnereink"><a href="#" ><i class="fas fa-handshake"></i></a></li>
+          <li data-title="Rovatok">
+            <a href="#" class="desktop-link" ><span style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+              <i class="fas fa-cog" style="font-size: 24px;"></i>
+              <i class="fas fa-hands"></i>
+            </span></a>
             <input type="checkbox" id="show-services2">
-            <label for="show-services2">  &#8681;Rovatok</label>
             <ul>
               <li><a href="#">Uszoda</a></li>
               <li><a href="#">Könyvtár</a></li>
@@ -152,13 +146,16 @@
              
             </ul>
           </li>
-          <li><a href="#">Kapcsolat</a></li>
-        <a href="login.html">   <button id="btn-login"  >Bejelentkezés</button></a>
-          
+          <li  data-title="Kapcsolat">
+            <a href="#" >
+              <i class="fas fa-at"></i>
+            </a>
+          </li>
         </ul>
+        <i class="fas fa-angle-right" id="drop"></i>
       </div>
-       
-     
+      
+      
     </nav>
   </div>
 
@@ -166,70 +163,69 @@
    
    <!-- < (end) navigation bar at top> -->
 
-
-
-
-
  
-  <div  class="contacts" style="   background-color: rgb(90, 86, 86); width: 100%; height: 1px;padding-top: 70px;  " > 
+   <div  class="contacts" style="background-color: rgb(90, 86, 86);   " > 
+     <span id="school-name-full" style="font-family: cursive;"  >Üdvözöljük Iskolánk Honlapján!</span>  
      
-   </div>
+       
+     
+     </div>
+       
+     <div id="login-box" style="display: flex;  height: 0vw; "><i>
+       <a href="login.html" id="btn-login">Bejelentkezés</a></i></div>  
  
 
 
  
 
- 
-  
-  
-
-
-
- 
- 
 
 
 
 <div class="picture-links"   >
      
-  <div>
-   
-  <a href="https://gyszc-pattantyus.e-kreta.hu/Adminisztracio/Login" target="_blank">   <img title="Kréta" src="kreta.jpg" alt=""></a>
-  </div>
-
-
-  <div   >
-   
-  <a href="https://intranet.pagisz.hu/webmail/" target="_blank">  <img title="E-mail belépés" src="mail.jpg" alt="">
-   
+  <div class="picture-animation-links" >
+     
+  <a   href="https://gyszc-pattantyus.e-kreta.hu/Adminisztracio/Login" target="_blank"> <i title="Kréta-napló"   class='fas fa-book' ></i>
+    </a>
   
+</div>
+  
+
+  <div  class="tooltip"   >
+  
+  <a href="https://intranet.pagisz.hu/webmail/" target="_blank">    <i title="Email belépés"   class='fas fa-envelope-open' ></i> 
+    
+   
   
   </a>
  </div>
 
-  <div style="  padding-bottom: 20px;">
+  <div style="  padding-bottom: 20px;"   >
      
-  <a href="https://moodle.pagisz.hu" target="_blank">  <img title="Moodle" src="moodle.jpg" alt=""></a>
+  <a href="https://moodle.pagisz.hu" target="_blank"> <i title="Moodle oldalunk"   class='fas fa-chalkboard-teacher' ></i></a> </a>
+ 
   </div>
 
-  <div style="  padding-bottom: 20px;">
+  <div class="tooltip"  style="  padding-bottom: 20px;">
      
-  <a href="https://www.facebook.com/pagisz" target="_blank"><img title="Facebook oldalunk" src="facebook.png" alt=""></a>
-  </div>
+  <a href="https://www.facebook.com/pagisz" target="_blank"><i title="Facebook oldalunk"    class=' fab fa-facebook' ></i></a>
+   
+</div>
 
 
 </div> 
-
+<div style="text-align: center;padding: 10px 0;">
+<span id="school-name"  >Üdvözöljük Iskolánk Honlapján!</span> </div>
   
   <section class="main-box">
     
 <div class="top-logo-text">
     <div class="logo">
-      <img src="pagisz.jpg" alt="">
+      <img src="images/pagisz.jpg" alt="">
    
       
     
-  <h2>Győri Szc Pattantyús-Ábrahám Géza Technikum </h2>
+  <h2>Győri SZC Pattantyús-Ábrahám Géza Technikum </h2>
     
       
     </div>
@@ -254,18 +250,26 @@
 
   </div>
     
+   </div>
+     
+   
+   
+   
+   
+   
     
   <div class="main-div-sector">
              
-        
-    <h2> Üdvözöljük iskolánk<br> weboldalán!</h2>
+     <i style="font-size: 40px; ">  Csak a Págisz!</i> 
+     
      <div class="picture"> 
        
    
 
   
 
-          <img  width="50%"  src="pagisz-picture.png" alt=" kép  ">
+      <img style="width: 60vw"; tabindex="-1" :#2589BD; class="pg_img"
+      src="images/pagiszinstitute.jpg" alt=" kép  ">
 
 
     </div>
@@ -278,7 +282,13 @@
   
   
    </section> 
-   <h1  style="text-align: center; margin-top: 100px; color: blue;">Beiskolázás</h1>
+   <h1  style="text-align: center; margin-top: 100px; color: #444444;
+   font-size: 50px;
+   
+   text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px
+    #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px 
+    #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px
+     #EEEEEE, 7px 6px 1px #CCCCCC;">Beiskolázás</h1>
   <section class="picture-video">
     
     <!-- <middle table at tops> -->
@@ -314,7 +324,7 @@
               <div class="beiskolazas"  >
                 <h2>Beiskolázási tájékoztató</h2>
                 <hr style="width: 80%; margin-left: 10%; background-color: black; height: 5px;">
-                <a href="/file/felvett/PAGISZ_leporello - 20201106_jó.pdf"><img  style="margin-top: 40px;" alt="" height="200" src="tablakep.png" width="250"></a>
+                <a href="/file/felvett/PAGISZ_leporello - 20201106_jó.pdf"><img  style="margin-top: 40px; width: 50%; height: 40%;" alt=""   src="images/tablakep.png" ></a>
              <p style="margin-top: 20px;"><a href="https://api.ikk.hu/storage/uploads/files/tajekoztato_az_okleveles_technikuskepzesrolpdf-1606471378143.pdf" style="text-align: center;">
                 TÁJÉKOZTATÓ<br />
                   AZ OKLEVELES<br />
@@ -368,36 +378,42 @@
   
 
 
-
-      
-
-
-
-      <div class="right-side-box" >
+      <div class="right-side-box"  >
 
 
         <div id="block-block-15" class="block block-block">
 
-          <h2 style="margin-top:  30px;">AKTUALITÁSOK</h2>
+          <h2 style="margin-top: 30px; font-size:2rem;">AKTUALITÁSOK</h2>
           <hr  style="width: 80%; height: 5px; background-color: rgb(1, 1, 2); margin-left: 10%; margin-bottom:  20px;  " >
-        
-        <div class="content">
+  <div class="actual" style="font-size: 1rem;">
+        <div class="content"   >
+          
+           
       <ul style="list-style-type: symbols(); text-align: left;">
-        <li><span style="font-size:16px"><span style="font-family:times new roman,times,serif"><a href="/file/field/szakkepzes_veszelyhelyzeti_intezkedesek_miniszteri_hatarozat_2103-1614955796607.pdf">2021.03.15. Miniszteri határozat a szakképzés vészhelyzeti intézkedéseiről</a></span></span></li>
-      <li><span style="font-size:16px"><span style="font-family:times new roman,times,serif"><a href="/file/field/Szakképzés_járványügyi_tájékoztatás_210304.pdf">2021.03.04. Járványügyi tájékoztatás.</a></span></span></li>
-      <li><span style="font-size:16px"><span style="font-family:times new roman,times,serif"><span style="background-color:rgb(255, 255, 255); color:rgb(68, 68, 68)"><a href="/file/field/PÁGISZ_Eüválsághelyzet Intézkedési terv_2021 03 11.pdf">2021.03.11 PÁGISZ&nbsp;Intézkedési terv egészségügyi vásághelyzetre</a></span></span></span></li>
-      <li><span style="font-size:16px"><a href="/file/field/MK_20_242-1.pdf">A Kormány 484/2020. (XI. 10.) Korm. rendelete a veszélyhelyzet idején alkalmazandó védelmi intézkedések második üteméről</a></span></li>
-      <li><span style="font-size:16px"><a href="https://api.ikk.hu/storage/uploads/files/miniszteri_hatarozat_veszelyhelyzet_20201110pdf-1605167472072.pdf">ITM - Egyedi Miniszteri Határozat</a></span></li>
-      <li><span style="font-size:16px"><a href="https://api.ikk.hu/storage/uploads/files/covid_2_tajekoztatas_szakkepzo_intezmenyekpdf-1605190740698.pdf">ITM - Tájékoztató - Pölöskei Gáborné</a></span></li>
-      <li><span style="font-size:16px"><a href="https://www.oktatas.hu/kozneveles/aktualis_tanev_esemenyei/covid19/EMMI_tanugyi_dontesek">EMMI - Tanügyi döntések</a></span></li>
-      <li><span style="font-size:16px"><a href="/file/field/11.17. Igazgatói tájékoztató2m.pdf">11.17. Igazgatói tájékoztató</a></span></li>
-      <li><span style="font-size:16px"><a href="/file/field/PÁGISZ_intézkedési terv_20201111.pdf">11.11. PÁGISZ - Intézkedési terv</a></span></li>
+        <li><span class="actual">
+          <span style="font-family:times new roman,times,serif"><a href="/file/field/szakkepzes_veszelyhelyzeti_intezkedesek_miniszteri_hatarozat_2103-1614955796607.pdf">2021.03.15. Miniszteri határozat a szakképzés vészhelyzeti intézkedéseiről</a></span></span></li>
+      <li><span class="actual">
+        <span style="font-family:times new roman,times,serif"><a href="/file/field/Szakképzés_járványügyi_tájékoztatás_210304.pdf">2021.03.04. Járványügyi tájékoztatás.</a></span></span></li>
+      <li><span class="actual">
+        <span style="font-family:times new roman,times,serif"><span style="background-color:rgb(255, 255, 255); color:rgb(68, 68, 68)"><a href="/file/field/PÁGISZ_Eüválsághelyzet Intézkedési terv_2021 03 11.pdf">2021.03.11 PÁGISZ&nbsp;Intézkedési terv egészségügyi vásághelyzetre</a></span></span></span></li>
+      <li><span class="actual">
+        <a href="/file/field/MK_20_242-1.pdf">A Kormány 484/2020. (XI. 10.) Korm. rendelete a veszélyhelyzet idején alkalmazandó védelmi intézkedések második üteméről</a></span></li>
+      <li><span class="actual"">
+        <a href="https://api.ikk.hu/storage/uploads/files/miniszteri_hatarozat_veszelyhelyzet_20201110pdf-1605167472072.pdf">ITM - Egyedi Miniszteri Határozat</a></span></li>
+      <li><span class="actual">
+        <a href="https://api.ikk.hu/storage/uploads/files/covid_2_tajekoztatas_szakkepzo_intezmenyekpdf-1605190740698.pdf">ITM - Tájékoztató - Pölöskei Gáborné</a></span></li>
+      <li><span class="actual">
+        <a href="https://www.oktatas.hu/kozneveles/aktualis_tanev_esemenyei/covid19/EMMI_tanugyi_dontesek">EMMI - Tanügyi döntések</a></span></li>
+      <li><span class="actual">
+        <a href="/file/field/11.17. Igazgatói tájékoztató2m.pdf">11.17. Igazgatói tájékoztató</a></span></li>
+      <li><span class="actual">
+        <a href="/file/field/PÁGISZ_intézkedési terv_20201111.pdf">11.11. PÁGISZ - Intézkedési terv</a></span></li>
       </ul><p>&nbsp;</p>
       <ul><li>09.18.&nbsp;<a href="/file/dokumentumtar/SZÜLŐI NYILATKOZAT IKTVI.docx">Szülői nyilatkozat</a></li>
       <li>09.01.&nbsp;<u><strong><a href="/file/field/ügyfélfogadási rend.pdf">Ügyfélfogadási rend (katt)</a></strong></u></li>
-      <li><span style="font-size:12px"><a href="https://www.pagisz.hu/?q=node/383"><span style="color:rgb(255, 0, 0)"><strong>FELNŐTTEK SZAKMAI OKTATÁSA 2020</strong></span></a></span></li>
+      <li><span class="actual"><a href="https://www.pagisz.hu/?q=node/383"><span style="color:rgb(255, 0, 0)"><strong>FELNŐTTEK SZAKMAI OKTATÁSA 2020</strong></span></a></span></li>
       </ul>
-    
+  </div>
         </div>
       </div>
 
@@ -416,28 +432,29 @@
              
              
            
-            <h2 style="margin-top: 30px;" >Naptári események</h2>
+            <h2 class="actual_taj" style="margin-top: 30px; font-size: 3rem;">Naptári események</h2>
             <hr  style="width: 80%; height: 5px; background-color: rgb(1, 1, 2); margin-left: 10%; margin-top:  0px;  " >
           <p class="rtecenter"><a href="https://www.pagisz.hu/?q=munkanaptar"></a>&nbsp;</p>
           <iframe frameborder="3"    scrolling="no" style="height: 50vh ; width: 100%;" 
            src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=Europe%2FBudapest&amp;src=Z3lvcnBhZ2lzekBnbWFpbC5jb20&amp;src=aHUuaHVuZ2FyaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%23039BE5&amp;color=%230B8043&amp;mode=AGENDA"  ></iframe>
           
-          <h3 style="margin-top: 30px; text-align: center;">Tájékozattók</h3>
+          <span style="margin-top: 30px; text-align: center;font-size: 3rem; " class="title_taj">Tájékozattók</span>
           <hr style="width: 80%; height: 5px; background-color: rgb(1, 1, 2); margin-left: 10%;margin-top: 10px; margin-bottom: 20px;  " >
           <ul id="more-information"   >
-            <li   >  <span  > 03.10.</span>&nbsp;<a href="/file/field/MRFK ELBÍR_külön kiadása.pdf" >Rendőrségi hírlevél 2020.12. Különszám</a></li>
-            <li > <span> 03.05.</span>&nbsp;<a href="/file/field/MRFK ELBÍR_2021.03.03.pdf"  >Rendőrségi hírlevél 2021.03.</a></li>
-            <li><span> 02.05.</span>&nbsp;<a href="/file/field/ELBÍR_HÍRLEVÉL_21.02.05..pdf"  >Rendőrségi hírlevél 2021.02.</a></li>
-            <li> <span> 01.14.</span>&nbsp;<a href="/file/field/MRFK ELBÍR_21.01.13.pdf"  >Rendőrségi hírlevél 2021.01.</a></li>
-            <li><span> 12.17.</span>&nbsp;<a href="/file/field/ELBÍR hírlevél külön kiadása 2020.12.16..pdf" >Rendőrségi hírlevél 2020.12. Különszám</a>&nbsp;</li>
-            <li><span> 12.11.</span>&nbsp;<a href="/file/field/GY-M-S MRFK ELBÍR_2020.12.10.pdf"  >Rendőrségi hírlevél 2020.12.</a></li>
-            <li><span> 11.25.</span>&nbsp;<a href="/file/field/ELBÍR_20.11.25..pdf"  >Rendőrségi hírlevél 2020.11.</a></li>
-            <li><span> 10.29.</span>&nbsp;<a href="/file/field/image/MRFK_Mindenszentek_2020.pdf"  >Rendőrségi hírlevél Mindenszentek</a></li>
-            <li><span> 10.15.</span>&nbsp;<a href="/file/field/image/GY-M-S MRFK ELBÍR_2020.10.15.pdf"  >Rendőrségi hírlevél 2020.10.</a></li>
-            <li><span> 08.11.</span>&nbsp;<a href="/file/field/image/MRFK ELBÍR_2020.08.10.pdf"  >Rendőrségi hírlevél 2020.08.</a></li>
+          <div class="actual_taj">
+            <li> <span> 03.10.</span>&nbsp;<a href="/file/field/MRFK ELBÍR_külön kiadása.pdf" >Rendőrségi hírlevél 2020.12. Különszám</a></li>
+            <li> <span> 03.05.</span>&nbsp;<a href="/file/field/MRFK ELBÍR_2021.03.03.pdf"  >Rendőrségi hírlevél 2021.03.</a></li>
+            <li> <span> 02.05.</span>&nbsp;<a href="/file/field/ELBÍR_HÍRLEVÉL_21.02.05..pdf"  >Rendőrségi hírlevél 2021.02.</a></li> 
+            <li> <span> 01.14.</span>&nbsp;<a href="/file/field/MRFK ELBÍR_21.01.13.pdf"  >Rendőrségi hírlevél 2021.01.</a></li> 
+            <li> <span> 12.17.</span>&nbsp;<a href="/file/field/ELBÍR hírlevél külön kiadása 2020.12.16..pdf" >Rendőrségi hírlevél 2020.12. Különszám</a>&nbsp;</li>
+            <li> <span> 12.11.</span>&nbsp;<a href="/file/field/GY-M-S MRFK ELBÍR_2020.12.10.pdf"  >Rendőrségi hírlevél 2020.12.</a></li> 
+            <li> <span> 11.25.</span>&nbsp;<a href="/file/field/ELBÍR_20.11.25..pdf"  >Rendőrségi hírlevél 2020.11.</a></li> 
+            <li> <span> 10.29.</span>&nbsp;<a href="/file/field/image/MRFK_Mindenszentek_2020.pdf"  >Rendőrségi hírlevél Mindenszentek</a></li> 
+            <li> <span> 10.15.</span>&nbsp;<a href="/file/field/image/GY-M-S MRFK ELBÍR_2020.10.15.pdf"  >Rendőrségi hírlevél 2020.10.</a></li> 
+            <li> <span> 08.11.</span>&nbsp;<a href="/file/field/image/MRFK ELBÍR_2020.08.10.pdf"  >Rendőrségi hírlevél 2020.08.</a></li>
             <li> <span> 07.13.</span>&nbsp;<span style="color:rgb(0, 0, 255)"><a href="/file/field/image/MRFK ELBÍR_2020.07.07.pdf">Rendőrségi hírlevél 2020.07.</a></span></li>
             </ul>
-            
+          </div>
           </div>
 </div>
 
@@ -456,13 +473,53 @@
 
 </main>
 
+<!--IMG Slider-->
+
+<div tabindex="-1" class="IMG-slider">
+  <h1 style="margin-bottom: 50px; text-align: center; font-size:2rem; font-family: monospace;" >Partnereink</h1>
+  <div class="images">
+   <a href="https://www.nemak.com/" target="_blank"> <img id="images" src="../pagisz/images/nemak.png"></a>
+  <a href="https://www.audi.hu/" target="_blank">  <img id="images" src="../pagisz/images/audi2.jpg"></a>
+   <a href="https://www.uni.sze.hu/" target="_blank"> <img id="images" src="../pagisz/images/szécheny.png"></a>
+  <a href="https://www.eon.hu/hu/lakossagi.html" target="_blank"> <img id="images" src="../pagisz/images/eon.jpg"></a> 
+  <a href="https://engineerinstruments.com/?lang=en" target="_blank">  <img id="images" src="../pagisz/images/engineer.png"></a>
+  <a href="http://www.atigyor.hu/" target="_blank">  <img id="images" src="../pagisz/images/easy rider.png"></a>
+  <a href="http://www.ipgyor.hu/vill-korr-hungaria-villamosipari-kft-_hu" target="_blank" >  <img id="images" src="../pagisz/images/vill-kor.jpg"></a>
+   <a href="https://melecs.com/rolunk/?lang=hu" target="_blank"> <img id="images" src="../pagisz/images/melecs.png"></a>
+  </div>
+
+<div class="sliders left" onclick="side_slide(-1)">
+    <span class="fas fa-angle-left"></span>
+  </div>
+<div class="sliders right" onclick="side_slide(1)">
+    <span class="fas fa-angle-right"></span>
+  </div>
+</div>
+<script>
+  var indexValue = 1;
+  showImg(indexValue);
+  function btm_slide(e){showImg(indexValue = e);}
+  function side_slide(e){showImg(indexValue += e);}
+  function showImg(e){
+    var i;
+    const img = document.querySelectorAll('#images');
+    const slider = document.querySelectorAll('.btm-slides span');
+    if(e > img.length){indexValue = 1}
+    if(e < 1){indexValue = img.length}
+    for(i = 0; i < img.length; i++){
+      img[i].style.display = "none";
+    }
+    for(i = 0; i < slider.length; i++){
+      slider[i].style.background = "rgba(255,255,255,0.1)";
+    }
+    img[indexValue-1].style.display = "block";
+    slider[indexValue-1].style.background = "white";
+  }
+</script>
 
 
 
-
-
-
-
+<!--end IMG Slider-->
   
    
   
@@ -476,7 +533,7 @@
     <footer>
       <div class="main-content">
         <div class="left box">
-          <h2>Vezetőség</h2>
+          <h2 >Vezetőség</h2>
           <div class="content">
             <ul style="list-style-type: none;">
               <a href="mailto:">  <li><span style="color: rgb(185, 189, 188);"> Igazgató: <b>Hatos Hajnalka</b></span> </a></li>
@@ -486,7 +543,11 @@
               <a href="mailto:">      <li> <span style="color: rgb(185, 189, 188);">Műszaki igh.:  <b> Kaproncai Ákos</b></span></li></a>
             
               <a href="mailto:">      <li> <span style="color: rgb(185, 189, 188);">Műszaki igh.: <b> Menyhárt Péter</b></span></li></a>
-                  
+               
+              <ul style="white-space: normal; list-style: none; margin-top: 10px; ">
+                <li style="font-weight: 800;"> Készítette:  <li style="font-family: cursive;">Nagy Erik Flórián, Pásztor Gergő, Tóth Tamás</li>     </li>
+                
+              </ul>
               </ul>
             <div class="social">
               <a href="https://www.facebook.com/pagisz"><span class="fab fa-facebook-f"></span></a>
@@ -496,10 +557,11 @@
             </div>
           </div>
         </div>
+        
 
         <div class="center box">
           <h2>Elérhetőség</h2>
-          <div class="content">
+          <div class="content"  >
             <div class="place">
               
               <a href=" https://www.google.com/maps/place/Gy%C5%91ri+SZC+Pattanty%C3%BAs-%C3%81brah%C3%A1m+G%C3%A9za+Technikum/@47.6639396,17.6362879,
@@ -510,7 +572,7 @@
               </a>
             </div>
             <div class="phone">
-              <a  style="text-decoration: none; color: blanchedalmond;" href=" tel:96/429-242 ">  
+              <a  style="text-decoration: none; color: rgb(251, 251, 251);" href=" tel:96/429-242 ">  
                 <span class="fas fa-phone-alt"></span>
                 Telefon:96/429-242
                </a>
@@ -518,7 +580,7 @@
               </a>
             </div>
             <div class="email">
-              <a style="text-decoration: none; color: blanchedalmond;" href=" mailto:pagisz@pagisz.hu"> 
+              <a style="text-decoration: none; color: rgb(248, 248, 248);" href=" mailto:pagisz@pagisz.hu"> 
               <span class="fas fa-envelope"></span>
               E-mail: pagisz@pagisz.hu</a>
             </div>
@@ -526,27 +588,6 @@
         </div>
 
 
-
-
-
-
-    
-
-
-
-
-
-
-
-    <!-- <srcipts> -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-   <script src="cookie.js"></script>
-    <script src="index.js"></script> 
-    
-     
-     
-      
 
 
        
